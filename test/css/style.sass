@@ -1,0 +1,85 @@
+@import url('fonts.css')
+@import url('reset.css')
+
+$margins: 20px
+
+html
+    font-family: 'Roboto slab', cursive
+.container
+    width: 1040px
+    margin: 0 auto
+    display: grid
+    grid-template-areas: "header header" "left_content content"
+    grid-template-columns: 200px auto
+    .header
+        grid-area: header
+        background: #FBFBFD
+        height: 50px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: $margins
+        box-shadow: 0 0 10px 0 #3a3a3a
+        .logo
+            margin-left: $margins
+            text-transform: uppercase
+            a
+                text-decoration: none
+                color: black
+        .navbar
+            text-transform: uppercase
+            margin-right: $margins
+            a
+                color: black
+                text-decoration: none
+                padding: 10px
+                transition: all 0.7s
+    .col-1
+        grid-area: left_content
+        background: grey
+        height: 100px
+        padding: $margins
+        border-radius: 8px
+        box-shadow: 0 0 10px 0 #3a3a3a
+    .col-2
+        grid-area: content
+        background: #ccc
+        margin-left: 40px
+        padding: $margins
+        border-radius: 8px
+        box-shadow: 0 0 10px 0 #3a3a3a
+        h2
+            font-size: 36px
+        h3
+            margin-top: $margins
+            font-size: 22px
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-top: $margins
+            input
+                margin: 10px
+                height: 30px
+                width: 350px
+                border: none
+                border-radius: 8px
+                &:focus
+                    border: 2px solid #0fc3f5;
+                    outline: none
+            a
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 245px
+                height: 30px
+                margin-top: $margins
+                text-decoration: none
+                color: #fff
+                font-weight: bold
+                text-transform: uppercase
+                background: #0fc3f5
+                transition: .3s
+                border-radius: 8px
+                &:hover
+                    background: #4442db
